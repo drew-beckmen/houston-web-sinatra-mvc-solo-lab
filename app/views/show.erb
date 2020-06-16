@@ -6,6 +6,10 @@
 <h2>Puppy Breed</h2>
 <p style="color:red"><%= @puppy.breed %></p>
 
+
+<h3><a href='/puppies/<%= @puppy.id %>/edit'>Edit this puppy</a></h3>
+<h3><a href='/puppies'>Back Home</a></h3>
+
 <form action='/puppies/<%= @puppy.id %>' method='post'>
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="Delete puppy">
