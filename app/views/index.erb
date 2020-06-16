@@ -1,0 +1,13 @@
+<h1>All Puppies</h1>
+
+<ul>
+    <% @puppies.each do |puppy| %>
+        <a href='puppies/<%= puppy.id %>'>
+            <li> <%= puppy.name %> </li>
+        </a>
+    <% end %>
+</ul>
+
+<form method='post' action='/puppies/new'>
+    <input type="submit" value="add puppy">
+</form>
